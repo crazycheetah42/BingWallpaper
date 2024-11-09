@@ -5,7 +5,7 @@
 
 import tkinter as tk
 from tkinter import ttk, messagebox
-import set_wall
+import bw
 from pathlib import Path
 import os, shutil
 import win32com.client
@@ -29,7 +29,7 @@ welcome_text.pack()
 space_lbl = ttk.Label(root, text="", font=("Segoe UI", 5))
 space_lbl.pack()
 
-set_wall_btn = ttk.Button(root, text="Download and Set Wallpaper", command=set_wall.download_wallpaper)
+set_wall_btn = ttk.Button(root, text="Download and Set Wallpaper", command=bw.download_wallpaper)
 set_wall_btn.pack()
 
 space_lbl = ttk.Label(root, text="", font=("Segoe UI", 10))
