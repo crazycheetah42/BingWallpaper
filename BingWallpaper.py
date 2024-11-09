@@ -94,7 +94,7 @@ link.pack(pady=20)
 
 def open_docs(event):
     import webbrowser
-    webbrowser.open("https://github.com/crazycheetah42/BingWallpaper/README.md#rundaily")
+    webbrowser.open("https://github.com/crazycheetah42/BingWallpaper/blob/main/README.md#run-daily")
 link.bind("<Button-1>", open_docs)
 
 if __name__ == "__main__":
