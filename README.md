@@ -17,3 +17,5 @@ Then set the app set_wall.exe as the Action in the Action tab. set_wall.exe will
 Go to Conditions and uncheck "Start only if computer is on AC power".
 Go to Settings and uncheck "Stop the task if it runs longer than 3 days".
 Click OK. The Task should be created successfully.
+
+In case you get Windows Defender screaming at you about threats in my program, all the source code is available here and it seems to be a consistent issue with pyinstaller. I haven't had this on Windows 11 systems, but more often on Windows 10 systems.
