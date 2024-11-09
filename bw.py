@@ -1,3 +1,9 @@
+# Author: Maximilian Muth <mail@maxi-muth.de>
+# https://github.com/mammuth/bing-wallpaper
+# Version: 1.0
+# License: GPL-2.0
+# Description: Downloads the Bing picture of the Day and sets it as wallpaper (Windows).
+
 import datetime
 from urllib.request import urlopen, urlretrieve
 from xml.dom import minidom
