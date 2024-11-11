@@ -15,7 +15,7 @@ import win32com.client
 root = tk.Tk()
 root.geometry("500x350")
 root.wm_title("Bing Wallpaper")
-root.iconbitmap("Resources/icon.ico")
+root.iconbitmap("icon.ico")
 
 app_heading = ttk.Label(root, text="Bing Wallpaper", font=("Segoe UI", 30))
 app_heading.pack()
