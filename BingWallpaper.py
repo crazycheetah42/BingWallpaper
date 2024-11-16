@@ -38,6 +38,7 @@ space_lbl.pack()
 settings_header = ttk.Label(root, text="Settings", font=("Segoe UI", 25))
 settings_header.pack()
 
+
 # Function to get the path to the Startup folder
 def get_startup_folder():
     """Returns the path to the Windows Startup folder for the current user."""
@@ -90,6 +91,7 @@ run_on_startup = ttk.Checkbutton(root, text="Run on startup",
                                  command=toggle_startup,
                                  width=13)
 run_on_startup.pack()
+
 
 link = ttk.Label(root, text="Click here to find out how to make this program automatically run daily", foreground="blue", cursor="hand2")
 link.pack(pady=20)
