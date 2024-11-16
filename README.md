@@ -22,4 +22,5 @@ There is a weird bug with PyInstaller, which is the module that compiles my code
 <br>
 # Support me
 If you appreciate this project and want to donate, please donate to this venmo account:
+<br>
 <img src="https://github.com/user-attachments/assets/b7f46d54-715c-49d0-9a90-ee14f5b4271f" height=276 width=276>
