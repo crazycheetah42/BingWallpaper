@@ -18,4 +18,8 @@ Go to Conditions and uncheck "Start only if computer is on AC power".
 Go to Settings and uncheck "Stop the task if it runs longer than 3 days".
 Click OK. The Task should be created successfully.
 
-In case you get Windows Defender screaming at you about threats in my program, all the source code is available here and it seems to be a consistent issue with pyinstaller. I haven't had this on Windows 11 systems, but more often on Windows 10 systems.
+There is a weird bug with PyInstaller, which is the module that compiles my code into an executable. Windows Defender (mostly on Windows 10) will flag it as a virus. However, I can guarantee that it's not a virus (all the code is here), and you just have to allow the file to run.
+<br>
+# Support me
+If you appreciate this project and want to donate, please donate to this venmo account:
+<img src="https://github.com/user-attachments/assets/b7f46d54-715c-49d0-9a90-ee14f5b4271f" height=276 width=276>
