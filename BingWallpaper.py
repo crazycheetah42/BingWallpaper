@@ -38,56 +38,6 @@ space_lbl.pack()
 settings_header = ttk.Label(root, text="Settings", font=("Segoe UI", 25))
 settings_header.pack()
 
-# Function to get the path to the Startup folder
-def get_startup_folder():
-    """Returns the path to the Windows Startup folder for the current user."""
-    return Path(os.getenv("APPDATA")) / "Microsoft" / "Windows" / "Start Menu" / "Programs" / "Startup"
-
-# Function to create a shortcut in the Startup folder
-def create_startup_shortcut():
-    """Creates a shortcut in the Windows Startup folder pointing to setwall.exe."""
-    exe_path = Path(__file__).parent / "setwall.exe"  # Path to the executable
-    startup_folder = get_startup_folder()
-    shortcut_path = startup_folder / "BingWallpaper.lnk"    # Shortcut path
-
-    try:
-        shell = win32com.client.Dispatch("WScript.Shell")
-        shortcut = shell.CreateShortcut(str(shortcut_path))
-        shortcut.TargetPath = str(exe_path)                 # Set target to setwall.exe
-        shortcut.WorkingDirectory = str(exe_path.parent)    # Set working directory
-        shortcut.Save()
-    except Exception as e:
-        messagebox.showerror("Failed to create shortcut", "Bing Wallpaper was unable to create a startup entry")
-
-# Function to remove the shortcut from the Startup folder
-def remove_startup_shortcut():
-    """Removes the BingWallpaper shortcut from the Windows Startup folder."""
-    shortcut_path = get_startup_folder() / "BingWallpaper.lnk"
-    try:
-        if shortcut_path.exists():
-            shortcut_path.unlink()
-        else:
-            print("")
-    except Exception as e:
-        messagebox.showerror("Failed to remove shortcut", "Bing Wallpaper was unable to remove the startup entry. The file resides in the shell:startup folder.")
-
-# Function to toggle the Run on Startup setting
-def toggle_startup():
-    if startup_checked.get():
-        create_startup_shortcut()
-    else:
-        remove_startup_shortcut()
-
-# Initialize the Run on Startup checkbox
-startup_checked = tk.BooleanVar()
-# Check if the shortcut already exists in the Startup folder
-startup_checked.set((get_startup_folder() / "BingWallpaper.lnk").exists())
-
-run_on_startup = ttk.Checkbutton(root, text="Run on startup", 
-                                 variable=startup_checked, 
-                                 command=toggle_startup,
-                                 width=13)
-run_on_startup.pack()
 
 link = ttk.Label(root, text="Click here to find out how to make this program automatically run daily", foreground="blue", cursor="hand2")
 link.pack(pady=20)
