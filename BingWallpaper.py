@@ -49,7 +49,7 @@ def create_startup_shortcut():
     """Creates a shortcut in the Windows Startup folder pointing to setwall.exe."""
     user_directory = os.environ['USERPROFILE']
     print(user_directory)
-    exe_path = Path(__file__).parent / f"{user_directory}\AppData\Local\Programs\BingWallpaper\setwall.exe"  # Path to the executable
+    exe_path = Path(__file__).parent / f"{user_directory}\\AppData\\Local\Programs\\BingWallpaper\\setwall.exe"  # Path to the executable
     startup_folder = get_startup_folder()
     shortcut_path = startup_folder / "BingWallpaper.lnk"    # Shortcut path
 
